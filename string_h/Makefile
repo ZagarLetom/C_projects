@@ -29,7 +29,8 @@ clean:
 	rm -rf *.gcno *.gcov *.gcda *.info report s21_string.a
 
 style:
-	clang-format -style=google -n *.c *.h
+	clang-format -n *.c *.h -style=Google
+	clang-format -i *.c *.h -style=Google
 
 # компил функций
 s21_string.a: $(OBJECTS)
